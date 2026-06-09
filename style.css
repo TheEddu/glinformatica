@@ -1,6 +1,6 @@
-    <style>
-        /* Reset simples */
-       {
+/* RESET */
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -171,4 +171,4 @@ footer p {
     .hero-content p {
         font-size: 1rem;
     }
-    </style>
+}
