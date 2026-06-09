@@ -1,91 +1,299 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GL Informática - Soluções em TI</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GL Informática</title>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="header-container">
+        <div class="logo">
+          <span class="logo-icon">⚙️</span>
+          <span class="logo-text">GL Informática</span>
+        </div>
 
-    <link rel="stylesheet" href="style.css">
-</head>
+        <button class="menu-toggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-<body>
-
-    <header>
-        <div class="logo">GL Informática</div>
-
-        <nav>
-            <a href="#">Início</a>
-            <a href="#servicos">Serviços</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#contato">Contato</a>
+        <nav class="nav">
+          <a href="#inicio" class="nav-link">Início</a>
+          <a href="#servicos" class="nav-link">Serviços</a>
+          <a href="#sobre" class="nav-link">Sobre</a>
+          <a href="#contato" class="nav-link">Contato</a>
         </nav>
+      </div>
     </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Soluções em Informática e Redes</h1>
+    <!-- HERO SECTION -->
+    <section id="inicio" class="hero">
+      <div class="hero-content">
+        <div class="glitch" data-text="Soluções em Informática e Redes">
+          <h1>Soluções em Informática e Redes</h1>
+        </div>
+        <p class="hero-subtitle">
+          Montagem de computadores, manutenção, infraestrutura de redes e
+          configurações MikroTik
+        </p>
+
+        <div class="hero-buttons">
+          <button class="btn btn-primary" onclick="scrollToServices()">
+            Ver Serviços
+          </button>
+          <button
+            class="btn btn-secondary"
+            onclick="
+              openWhatsApp(
+                'Olá! Gostaria de receber um orçamento para os serviços da GL Informática.',
+              )
+            "
+          >
+            Solicitar Orçamento
+          </button>
+        </div>
+
+        <div class="hero-animation">
+          <div class="cube">
+            <div class="cube-face cube-front">⚙️</div>
+            <div class="cube-face cube-back">💻</div>
+            <div class="cube-face cube-right">🌐</div>
+            <div class="cube-face cube-left">📡</div>
+            <div class="cube-face cube-top">🔧</div>
+            <div class="cube-face cube-bottom">🖥️</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-glow"></div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="servicos" class="services">
+      <div class="container">
+        <h2 class="section-title">Nossos Serviços</h2>
+        <p class="section-subtitle">Explore os serviços que oferecemos</p>
+
+        <div class="cards-grid">
+          <!-- Card 1: Montagem de Computadores -->
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <!-- Front -->
+              <div class="flip-card-front">
+                <div class="card-icon">🖥️</div>
+                <h3>Montagem de Computadores</h3>
+                <p class="card-hint">Clique para mais</p>
+              </div>
+              <!-- Back -->
+              <div class="flip-card-back">
+                <h3>Montagem de Computadores</h3>
+                <p>
+                  Computadores personalizados para trabalho, estudo e games com
+                  hardwares de qualidade.
+                </p>
+                <button
+                  class="btn-contact"
+                  onclick="
+                    openWhatsApp(
+                      'Olá! Tenho interesse em montagem de computadores. Gostaria de mais informações.',
+                    )
+                  "
+                >
+                  <span class="phone-icon">📱</span> Conversar
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Manutenção -->
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <!-- Front -->
+              <div class="flip-card-front">
+                <div class="card-icon">🔧</div>
+                <h3>Manutenção</h3>
+                <p class="card-hint">Clique para mais</p>
+              </div>
+              <!-- Back -->
+              <div class="flip-card-back">
+                <h3>Manutenção</h3>
+                <p>
+                  Formatação, limpeza, upgrades, suporte técnico e diagnóstico
+                  de problemas.
+                </p>
+                <button
+                  class="btn-contact"
+                  onclick="
+                    openWhatsApp(
+                      'Olá! Preciso de suporte técnico e manutenção no meu computador.',
+                    )
+                  "
+                >
+                  <span class="phone-icon">📱</span> Conversar
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Infraestrutura de Redes -->
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <!-- Front -->
+              <div class="flip-card-front">
+                <div class="card-icon">🌐</div>
+                <h3>Infraestrutura de Redes</h3>
+                <p class="card-hint">Clique para mais</p>
+              </div>
+              <!-- Back -->
+              <div class="flip-card-back">
+                <h3>Infraestrutura de Redes</h3>
+                <p>
+                  Instalação de cabeamento estruturado, organização de racks e
+                  otimização de conectividade.
+                </p>
+                <button
+                  class="btn-contact"
+                  onclick="
+                    openWhatsApp(
+                      'Olá! Preciso de serviços de infraestrutura de redes para minha empresa.',
+                    )
+                  "
+                >
+                  <span class="phone-icon">📱</span> Conversar
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Configuração MikroTik -->
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <!-- Front -->
+              <div class="flip-card-front">
+                <div class="card-icon">📡</div>
+                <h3>Configuração MikroTik</h3>
+                <p class="card-hint">Clique para mais</p>
+              </div>
+              <!-- Back -->
+              <div class="flip-card-back">
+                <h3>Configuração MikroTik</h3>
+                <p>
+                  Firewall, VPN, Balanceamento de carga, Hotspot e QoS para sua
+                  rede.
+                </p>
+                <button
+                  class="btn-contact"
+                  onclick="
+                    openWhatsApp(
+                      'Olá! Preciso de configuração e gerenciamento de MikroTik para minha rede.',
+                    )
+                  "
+                >
+                  <span class="phone-icon">📱</span> Conversar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="sobre" class="about">
+      <div class="container">
+        <div class="about-content">
+          <h2 class="section-title">Sobre a GL Informática</h2>
+          <div class="about-text">
             <p>
-                Montagem de computadores, manutenção,
-                infraestrutura de redes e configurações MikroTik.
+              A GL Informática atua com soluções completas em informática,
+              oferecendo montagem de computadores personalizados, manutenção
+              preventiva e corretiva, além de gerenciamento profissional de
+              redes para residências e empresas.
+            </p>
+            <p>
+              Com experiência no mercado, trabalhamos com tecnologias modernas e
+              confiáveis, garantindo qualidade, segurança e eficiência em todos
+              os nossos projetos.
             </p>
 
-            <a href="#" class="btn">Solicitar Orçamento</a>
+            <div class="about-features">
+              <div class="feature">
+                <span class="feature-icon">✓</span>
+                <span class="feature-text">Atendimento Personalizado</span>
+              </div>
+              <div class="feature">
+                <span class="feature-icon">✓</span>
+                <span class="feature-text">Tecnologia de Ponta</span>
+              </div>
+              <div class="feature">
+                <span class="feature-icon">✓</span>
+                <span class="feature-text">Suporte Técnico</span>
+              </div>
+              <div class="feature">
+                <span class="feature-icon">✓</span>
+                <span class="feature-text">Garantia de Qualidade</span>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <section id="servicos">
+    <!-- FOOTER -->
+    <footer id="contato" class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>GL Informática</h3>
+            <p>Soluções em TI para seu sucesso</p>
+          </div>
 
-        <h2 class="titulo">Nossos Serviços</h2>
-
-        <div class="servicos">
-
-            <div class="card">
-                <h3>🖥️ Montagem de Computadores</h3>
-                <p>Computadores personalizados para trabalho, estudo e games.</p>
-            </div>
-
-            <div class="card">
-                <h3>🔧 Manutenção</h3>
-                <p>Formatação, limpeza, upgrades e suporte técnico.</p>
-            </div>
-
-            <div class="card">
-                <h3>🌐 Infraestrutura de Redes</h3>
-                <p>Instalação de cabeamento estruturado e organização de racks.</p>
-            </div>
-
-            <div class="card">
-                <h3>📡 Configuração MikroTik</h3>
-                <p>Firewall, VPN, Balanceamento, Hotspot e QoS.</p>
-            </div>
-
-        </div>
-
-    </section>
-
-    <section id="sobre">
-
-        <div class="sobre">
-
-            <h2 class="titulo">Sobre a GL Informática</h2>
-
+          <div class="footer-section">
+            <h3>Contato</h3>
             <p>
-                Atuamos com soluções completas em informática,
-                manutenção de computadores e gerenciamento de redes para
-                residências e empresas.
+              <a href="tel:+5519992895723" class="footer-link"
+                >📞 (19) 99289-5723</a
+              >
             </p>
+            <p>
+              <a href="mailto:gllimeira@hotmail.com" class="footer-link"
+                >✉️ gllimeira@hotmail.com</a
+              >
+            </p>
+          </div>
 
+          <div class="footer-section">
+            <h3>Redes Sociais</h3>
+            <p>
+              <a
+                href="https://wa.me/5519992895723"
+                target="_blank"
+                class="footer-link"
+                >WhatsApp</a
+              >
+            </p>
+          </div>
         </div>
 
-    </section>
-
-    <footer id="contato">
-        <p>© 2026 GL Informática - Todos os direitos reservados.</p>
-        <p>📞 (19) 99289-5723</p>
-        <p>✉ gllimeira@hotmail.com</p>
+        <div class="footer-bottom">
+          <p>
+            Desenvolvido por
+            <a
+              href="https://theeddu.github.io/PersonalPortfolioPage/"
+              target="_blank"
+              class="footer-link"
+              >Eduardo</a
+            >
+          </p>
+        </div>
+      </div>
     </footer>
 
-</body>
-
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>
